@@ -86,7 +86,7 @@ void ford_fulkerson(int n, int m, int s, int t) {
     while(1) { // Vòng lặp tổng thể tìm đường tăng luồng liên tục cho đến khi tắc nghẽn hoàn toàn
         reset_label(n);
 
-        V[s].v = s; //! LƯU Ý: Phải chốt V[s].v = s chứ không được để = -1 để bảo vệ đỉnh nguồn. Đóng dấu chủ quyền chặn đứng các đỉnh con loang ngược về nguồn gây ra VÒNG LẶP VÔ TẬN.
+        V[s].v = s; //! LƯU Ý: Phải chốt V[s].v = s để bảo vệ đỉnh nguồn
         V[s].d = INT_MAX; // Đỉnh nguồn có khả năng cấp tải vô hạn
         V[s].type = 0; // Đỉnh xuất phát mặc định loại cung bằng 0
 
